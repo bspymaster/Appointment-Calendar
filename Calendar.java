@@ -53,7 +53,7 @@ public class Calendar {
             x = cal.get(dat);
             System.out.println("Your appointments for " + dat + "are: \n");
             for(int i = 0; i<x.size(); i++){
-                System.out.println(x.get(i).getStartTime + x.get(i).getEndTime + x.get(i).description);
+                System.out.println(x.get(i).getStartTime() + x.get(i).getEndTime() + x.get(i).getDescription());
             }
         }else{
             System.out.println("No appointments");
