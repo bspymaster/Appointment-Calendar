@@ -28,6 +28,13 @@ public class Appointment {
         endTime = _endDateTime;
     }
     /**
+     * Sets the description for the appointment
+     * @param _description A String object holding a brief description about the appointment
+     */
+    public void setDescription(String _description){
+        description = _description;
+    }
+    /**
      * Gets the starting date and time of the appointment
      * @return the starting date and time of the appointment
      */
@@ -41,9 +48,15 @@ public class Appointment {
     public DateTime getEndTime(){
         return endTime;
     }
+    /**
+     * Gets the description of the appointment
+     * @return the description of the appointment
+     */
+    public DateTime getDescription(){
+        return description;
+    }
     
     private DateTime startTime;
     private DateTime endTime;
     private String description;
 }
-
