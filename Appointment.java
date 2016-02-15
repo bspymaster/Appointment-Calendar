@@ -1,5 +1,7 @@
 /**
  * A class that holds data related to an individual appointment
+ * 
+ * @author Ben Schwabe & Tom Salvi
  */
 public class Appointment {
     /**
