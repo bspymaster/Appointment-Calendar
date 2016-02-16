@@ -36,12 +36,11 @@ public class Calendar {
      */
     public void deleteApt(dateTime startTim, dateTime endTim, String desc)
     {
-        Appointment apt = new Appointment(startTim, endTim, desc);
         List z = cal.get(startTim.getDate());
         boolean flag = true;
         int i = 0;
         while(flag){
-           if(z.get(i).getDescription()==desc && z.get(i).getStartTime() == startTim ){
+           if(z.get(i).getDescription()==desc && z.get(i).getStartTime() == startTim && z.get(i).getEndTime() == endTim){
                z.remove(i);
                flag = false;
            }
