@@ -23,15 +23,15 @@ public class main {
                 String startDay = in.next();
                 System.out.print("Please enter a starting time in the format hh:mm, where hh is between 00 and 23, and minute is between 00 and 59\n> ");
                 String startTime = in.next();
-                dateTime startDate = new dateTime(startDay + " " + startTime);
+                DateTime startDate = new DateTime(startDay + " " + startTime);
                 
                 System.out.print("Please enter an ending date in the format yyyy/mm/dd\n> ");
                 String endDay = in.next();
                 System.out.print("Please enter an ending time in the format hh:mm, where hh is between 00 and 23, and minute is between 00 and 59\n> ");
                 String endTime = in.next();
-                dateTime endDate = new dateTime(endDay + " " + endTime);
+                DateTime endDate = new DateTime(endDay + " " + endTime);
                 
-                cal.addApppointment(startDate,endDate,desc);
+                cal.addApt(startDate,endDate,desc);
             }else if(input.equals("2")){
                 System.out.println("fill with appointment deleting");
             }else if(input.equals("3")){

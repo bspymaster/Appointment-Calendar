@@ -54,7 +54,7 @@ public class Appointment {
      * Gets the description of the appointment
      * @return the description of the appointment
      */
-    public DateTime getDescription(){
+    public String getDescription(){
         return description;
     }
     

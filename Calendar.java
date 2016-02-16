@@ -7,7 +7,7 @@ public class Calendar {
     /**
      * The constructor for Calendar.
      */
-    public Caledar(){
+    public Calendar(){
         cal = new HashMap<date, List>();
     }
     /**
@@ -16,7 +16,7 @@ public class Calendar {
      * @param endTim A DateTime object that is the ending time of the appointment.
      * @param desc A string that is the description of the appointment.
      */
-    public void addApt(dateTime startTim, dateTime endTim, String desc)
+    public void addApt(DateTime startTim, DateTime endTim, String desc)
     {
         Appointment apt = new Appointment(startTim, endTim, desc);
         if(cal.containsKey(startTim.getDate())){
@@ -34,7 +34,7 @@ public class Calendar {
      * @param endTim A DateTime object that is the ending time of the appointment.
      * @param desc A string that is the description of the appointment.
      */
-    public void deleteApt(dateTime startTim, dateTime endTim, String desc)
+    public void deleteApt(DateTime startTim, DateTime endTim, String desc)
     {
         List z = cal.get(startTim.getDate());
         boolean flag = true;
