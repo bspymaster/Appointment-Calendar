@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 /**
@@ -24,7 +25,7 @@ public class Calendar {
             z.add(apt);
             
         }else{
-            List y;
+            ArrayList y = new ArrayList<Appointment>() {};
             y.add(apt);
             cal.put(startTim.getDate(), y);
         }
