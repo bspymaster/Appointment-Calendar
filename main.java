@@ -33,7 +33,23 @@ public class main {
                 
                 cal.addApt(startDate,endDate,desc);
             }else if(input.equals("2")){
-                System.out.println("fill with appointment deleting");
+                System.out.print("\nPlease enter a description matching the appointment to delete:\n> ");
+                String desc = in.next(); //catches first word (waits for it)
+                desc += in.nextLine(); //catches rest of the line (does not wait)
+                
+                System.out.print("Please enter the starting date in the format yyyy/mm/dd\n> ");
+                String startDay = in.next();
+                System.out.print("Please enter the starting time in the format hh:mm, where hh is between 00 and 23, and minute is between 00 and 59\n> ");
+                String startTime = in.next();
+                DateTime startDate = new DateTime(startDay + " " + startTime);
+                
+                System.out.print("Please enter the ending date in the format yyyy/mm/dd\n> ");
+                String endDay = in.next();
+                System.out.print("Please enter the ending time in the format hh:mm, where hh is between 00 and 23, and minute is between 00 and 59\n> ");
+                String endTime = in.next();
+                DateTime endDate = new DateTime(endDay + " " + endTime);
+                
+                cal.addApt(startDate,endDate,desc);
             }else if(input.equals("3")){
                 System.out.print("Please enter a year you would like to see the appointments for.\n> ");
                 int year = Integer.parseInt(in.next());
@@ -48,8 +64,6 @@ public class main {
             }else{
                 System.out.println("ERROR: Invalid input. Please try again.\n");
             }
-            //CalendarInterface cal = new CalendarInterface();
         }
     }
 }
-
