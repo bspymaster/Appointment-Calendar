@@ -8,7 +8,7 @@ public class Calendar {
      * The constructor for Calendar.
      */
     public Calendar(){
-        cal = new HashMap<date, List>();
+        cal = new HashMap<date, List<Appointment>>();
     }
     /**
      * Creates a new appointment and adds it to the HashMap of Appointments.
@@ -20,7 +20,8 @@ public class Calendar {
     {
         Appointment apt = new Appointment(startTim, endTim, desc);
         if(cal.containsKey(startTim.getDate())){
-            cal.getClass(startTim.getDate()).add(apt);
+            List z = (List) cal.get(startTim.getDate());
+            z.add(apt);
             
         }else{
             List y;
@@ -36,11 +37,12 @@ public class Calendar {
      */
     public void deleteApt(DateTime startTim, DateTime endTim, String desc)
     {
-        List z = cal.get(startTim.getDate());
+        List z = (List) cal.get(startTim.getDate());
         boolean flag = true;
         int i = 0;
         while(flag){
-           if(z.get(i).getDescription()==desc && z.get(i).getStartTime() == startTim && z.get(i).getEndTime() == endTim){
+            Appointment a = (Appointment) z.get(i);
+           if(a.getDescription() == desc && a.getStartTime() == startTim && a.getEndTime() == endTim){
                z.remove(i);
                flag = false;
            }
@@ -56,10 +58,13 @@ public class Calendar {
     {
         //Date date = Date(dat);
         if(cal.containsKey(date)){
-            List x = cal.get(date);
+            List x = (List) cal.get(date);
             System.out.println("Your appointments for " + date + "are: \n");
             for(int i = 0; i<x.size(); i++){
-                System.out.println(x.get(i).getStartTime() + x.get(i).getEndTime() + x.get(i).getDescription());
+                Appointment a = (Appointment) x.get(i);
+                System.out.println(a.getStartTime());
+                System.out.println(a.getEndTime());
+                System.out.println(a.getDescription());
             }
         }else{
             System.out.println("No appointments");
