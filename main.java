@@ -43,13 +43,7 @@ public class main {
                 String startTime = in.next();
                 DateTime startDate = new DateTime(startDay + " " + startTime);
                 
-                System.out.print("Please enter the ending date in the format yyyy/mm/dd\n> ");
-                String endDay = in.next();
-                System.out.print("Please enter the ending time in the format hh:mm, where hh is between 00 and 23, and minute is between 00 and 59\n> ");
-                String endTime = in.next();
-                DateTime endDate = new DateTime(endDay + " " + endTime);
-                
-                cal.addApt(startDate,endDate,desc);
+                cal.deleteApt(startDate, desc);
             }else if(input.equals("3")){
                 System.out.print("Please enter a year you would like to see the appointments for.\n> ");
                 int year = Integer.parseInt(in.next());

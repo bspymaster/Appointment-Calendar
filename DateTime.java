@@ -40,13 +40,13 @@ public class DateTime {
         if (hour < 0 || hour > 23){
             throw ehour;
         }
-        if (minute < 0 || month > 59){
+        if (minute < 0 || minute > 59){
             throw emin;
         }
         time newtime = new time(hour, minute);
         t = newtime;
         date newdate = new date(year, month, day);
-        d = newdate;    
+        d = newdate;
     }
     public time getTime(){
         return t;

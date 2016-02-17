@@ -22,7 +22,7 @@ public class time {
     }
     
     public int getMinute(){
-        return hour;
+        return minute;
     }
     
     public void setHour(int h){
