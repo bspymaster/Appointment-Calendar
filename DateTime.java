@@ -16,15 +16,15 @@ public class DateTime {
     private date d;
     
     DateTime(String dt) {
-        String y = dt.substring(1, 4);
+        String y = dt.substring(0, 4);
         int year = Integer.parseInt(y);
-        String m = dt.substring(6, 7);
+        String m = dt.substring(5, 7);
         int month = Integer.parseInt(m);
-        String dy = dt.substring(9,10);
+        String dy = dt.substring(8,10);
         int day = Integer.parseInt(dy);
-        String h = dt.substring(12, 14);
+        String h = dt.substring(11, 13);
         int hour = Integer.parseInt(h);
-        String min = dt.substring(16, 17);
+        String min = dt.substring(14, 16);
         int minute = Integer.parseInt(min);
         int[] daysinmonth = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
         Error emonth = new Error("Month out of bounds.");
